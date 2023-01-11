@@ -37,7 +37,7 @@ submitHandler = (e) => {
     return (
       <div>
         {
-        this.state.showMessage ? <p className='standardText'>Successful Update</p> : null
+        this.state.showMessage ? <p className='standardText'>Creation Successful</p> : null
       }
         <h1 className='sectionHeader'>Create new listing</h1>
        <h2>Enter new Product ID: <input onChange={this.onIdChange} className='inputClass'/></h2>
