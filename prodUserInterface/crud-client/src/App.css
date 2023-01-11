@@ -1,0 +1,104 @@
+.App {
+  text-align: center;
+  background-color: azure;
+  position:absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/*Custom CSS Classes made by Dan Wright*/
+
+.NavBar {
+  background-color: cornsilk;
+}
+
+.sectionHeader{
+  font-style: italic;
+  text-decoration: underline overline;
+}
+
+.liClass{
+  list-style: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 30px;
+}
+
+.linkClass{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14pt;
+}
+
+.buttonClass{
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.buttonClass:hover{
+  background-color: darkseagreen;
+}
+
+.buttonClass:active{
+  background-color: darkseagreen;
+}
+
+.standardText{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 18px;
+}
+
+.inputClass{
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: large;
+}
+
+/*Not this one...*/
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
