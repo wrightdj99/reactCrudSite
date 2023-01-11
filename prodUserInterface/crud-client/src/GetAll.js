@@ -26,11 +26,13 @@ componentDidMount(){
       <div>
         <h1 className='sectionHeader'>Home</h1>
         <h1>Your Products Listed</h1>
+        <div className='listingsHome'>
         <ul className='liClass'>
         {this.state.products.map(product => (
           <li key={product.id}>{product.name} (id: {product.id}) - ${product.price % 1 != 0 ? product.price : product.price + ".00"}</li>
           ))}
         </ul>
+        </div>
       </div>
     );
   }
