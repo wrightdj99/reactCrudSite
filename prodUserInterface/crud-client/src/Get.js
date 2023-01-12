@@ -1,24 +1,18 @@
 import './App.css';
-import { Component } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 
-class Get extends Component {
+function Get() {
 
   //Init an empty array in the constructor and get the Parent class
-constructor(props){
-  super(props);
-  this.state = {product: {}}
-}
 
-onIdChange = (e) => {
-    this.setState({id: e.target.value});
-}
+const [product, setProduct] = useState({});
 
-getProduct = () => {
-    axios.get("http://localhost:8080/api/products/"+this.state.id)
+function getProduct() {
+    axios.get("http://localhost:8080/api/products/"+product.id)
     .then(res=>{
         if(res.data[0] === undefined){
-          this.setState({product: {
+          setProduct({product: {
             name: "Unknown Product",
             price: 0
           }});
@@ -26,25 +20,21 @@ getProduct = () => {
         }
         else{
           console.log(res.data[0]);
-          this.setState({product: res.data[0]});
+          setProduct(res.data[0]);
         }
     })
 }
-
-  render(){
     return (
       <div>
         <h1 className='sectionHeader'>Get information about a listing</h1>
-        <h2>Enter Product ID to get its info: <input onChange={this.onIdChange} className='inputClass'></input></h2>
+        <h2>Enter Product ID to get its info: <input onChange={e=>setProduct({id:e.target.value})} className='inputClass'></input></h2>
         <br/>
-        <button onClick={this.getProduct.bind(this)} className="buttonClass">Get Product</button>
+        <button onClick={getProduct.bind(this)} className="buttonClass">Get Product</button>
         <br/>
         <br/>
-        <p className="standardText">Name: {this.state.product.name}</p>
-        <p className="standardText">Price: {!this.state.product.price ? null : '$' + this.state.product.price}</p>
+        <p className="standardText">Name: {product.name}</p>
+        <p className="standardText">Price: {!product.price ? null : '$' + product.price}</p>
       </div>
-    );
-  }
-}
+    );}
 
 export default Get;
