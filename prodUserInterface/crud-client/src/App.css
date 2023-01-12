@@ -64,6 +64,12 @@
   font-size: 18px;
 }
 
+.notificationText{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 18px;
+  color: red;
+}
+
 .inputClass{
   padding: 12px 20px;
   margin: 8px 0;

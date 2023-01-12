@@ -36,10 +36,11 @@ updateHandler = (e) => {
     return (
       <div>
         {
-        this.state.showMessage ? <p className='standardText'>Successful Update</p> : null
+        this.state.showMessage ? <p className='notificationText'>Successful Update</p> : null
       }
+      
       <h1 className='sectionHeader'>Update a product listing</h1>
-       <h2>Enter updated Product ID: <input onChange={this.onIdChange} className='inputClass'/></h2>
+       <h2>Enter current Product ID: <input onChange={this.onIdChange} className='inputClass'/></h2>
        <h2>Enter updated Product Name: <input onChange={this.onNameChange} className='inputClass'/></h2>
        <h2>Enter updated Product Price: <input onChange={this.onPriceChange} className='inputClass'/></h2>
        <button onClick={this.updateHandler.bind(this)} className='buttonClass'>Submit</button>

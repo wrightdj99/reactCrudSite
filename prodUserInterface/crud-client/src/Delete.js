@@ -26,7 +26,7 @@ delProduct = () => {
     return (
       <div>
         {
-        this.state.deleted ? <p className='standardText'>Successful Delete</p> : null
+        this.state.deleted ? <p className='notificationText'>Successful Delete</p> : null
       }
         <h1 className='sectionHeader'>Delete a listing</h1>
         <h2>Enter Product ID to delete: <input onChange={this.onIdChange} className='inputClass'></input></h2>
