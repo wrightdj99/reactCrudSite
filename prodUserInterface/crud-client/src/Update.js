@@ -11,15 +11,15 @@ constructor(props){
 }
 
 onNameChange = (e) => {
-    this.setState({name: e.target.value});
+    this.setState({name: e.target.value, showMessage: false});
 }
 
 onPriceChange = (e) => {
-    this.setState({price: e.target.value});
+    this.setState({price: e.target.value, showMessage: false});
 }
 
 onIdChange = (e) => {
-    this.setState({id: e.target.value});
+    this.setState({id: e.target.value, showMessage: false});
 }
 
 updateHandler = (e) => {

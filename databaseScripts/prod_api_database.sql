@@ -1,5 +1,5 @@
 use mydb;
-create table product(id int, name varchar(20), price int);
+create table product(id int, name varchar(50), price int);
 select * from product;
 /*To make it currency-formatted*/
 alter table product

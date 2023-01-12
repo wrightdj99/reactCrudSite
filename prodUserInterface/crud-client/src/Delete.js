@@ -11,7 +11,7 @@ constructor(props){
 }
 
 onIdChange = (e) => {
-    this.setState({id: e.target.value});
+    this.setState({id: e.target.value, deleted: false});
 }
 
 delProduct = () => {
